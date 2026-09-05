@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payroll AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Payroll AI Assistant</h1>
+
+    <p>AI Powered Payroll Assistant</p>
+
+    <hr>
+
+    <h3>Upload Payslip</h3>
+
+    <input type="file" id="payslip">
+    <button id="uploadBtn">Upload</button>
+
+    <hr>
+
+    <h3>Ask Payroll Question</h3>
+
+    <textarea
+        id="question"
+        rows="5"
+        placeholder="Example: Why is my salary lower this month?">
+    </textarea>
+
+    <br><br>
+
+    <button id="askBtn">Ask AI</button>
+
+    <hr>
+
+    <h3>Response</h3>
+
+    <div id="response">
+        Waiting for your question...
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
