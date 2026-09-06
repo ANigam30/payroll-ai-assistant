@@ -1,6 +1,3 @@
-// ===============================
-// Upload Payslip
-// ===============================
 
 document.getElementById("uploadBtn").addEventListener("click", async () => {
 

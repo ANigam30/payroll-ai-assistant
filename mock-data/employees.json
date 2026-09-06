@@ -1,7 +1,7 @@
-[
-  {
-    "employeeId": "EMP001",
-    "name": "Anurag Nigam",
-    "department": "Engineering"
-  }
-]
+{
+  "employeeId": "EMP001",
+  "employeeName": "Demo Employee",
+  "email": "demo.employee@example.com",
+  "department": "Technology",
+  "designation": "Software Engineer"
+}
