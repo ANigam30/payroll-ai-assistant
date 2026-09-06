@@ -1,15 +1,7 @@
-# Dependencies
+cat > .gitignore <<EOF
 node_modules/
-
-# Environment
 .env
-
-# Uploaded payslips
 uploads/
-
-# Logs
 *.log
-npm-debug.log*
-
-# macOS
 .DS_Store
+EOF

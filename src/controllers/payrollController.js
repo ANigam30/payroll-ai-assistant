@@ -3,7 +3,7 @@ const payrollService = require("../services/payrollService");
 const getPayroll = (req, res) => {
 
     // Mock Logged-in Employee
-    const employeeId = "EMP001";
+    const employeeId = req.user.employeeId;
 
     const payroll = payrollService.getEmployeePayroll(employeeId);
 

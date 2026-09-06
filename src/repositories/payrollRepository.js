@@ -1,4 +1,4 @@
-const payrolls = require("../../mock/payroll.json");
+const payrolls = require("../../mock-data/payroll.json");
 
 const getPayrollByEmployeeId = (employeeId) => {
     return payrolls.find(

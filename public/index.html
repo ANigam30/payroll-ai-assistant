@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Payroll AI Assistant</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
     <h1>Payroll AI Assistant</h1>
-
-    <p>AI Powered Payroll Assistant</p>
+    <p>Employee Payroll & Tax Assistant</p>
 
     <hr>
 
@@ -26,24 +16,49 @@
 
     <textarea
         id="question"
-        rows="5"
-        placeholder="Example: Why is my salary lower this month?">
+        rows="4"
+        placeholder="Example: Why is my net salary lower this month?">
     </textarea>
 
     <br><br>
 
     <button id="askBtn">Ask AI</button>
 
-    <hr>
-
-    <h3>Response</h3>
+    <h4>AI Response</h4>
 
     <div id="response">
         Waiting for your question...
     </div>
 
+    <hr>
+
+    <h3>Tax Saving Simulation</h3>
+
+    <input
+        type="number"
+        id="investment"
+        placeholder="80C Investment Amount">
+
+    <button id="taxBtn">
+        Calculate
+    </button>
+
+    <h4>Estimated Tax Saving</h4>
+
+    <div id="taxResult">
+        --
+    </div>
+
+    <hr>
+
+    <h3>Investment Proof Checklist</h3>
+
+    <ul>
+        <li>✅ HRA Rent Receipts</li>
+        <li>❌ Section 80C Investment Proof</li>
+        <li>❌ LTA Bills</li>
+    </ul>
+
     <script src="app.js"></script>
 
 </body>
-
-</html>

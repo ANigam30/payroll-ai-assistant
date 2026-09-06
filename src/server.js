@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 const payrollRoutes = require("./routes/payrollRoutes");
 const multer = require("multer");
 const payslipRoutes = require("./routes/payslipRoutes");
+const assistantRoutes = require("./routes/assistantRoutes");
+const taxRoutes = require("./routes/taxRoutes");
 
 // Middleware
 app.use(express.json());
@@ -20,6 +22,19 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         cb(null, Date.now() + "-" + file.originalname);
     }
+});
+
+app.use((req, res, next) => {
+    req.user = {
+        employeeId: req.headers["x-employee-id"] || "EMP001"
+    };
+    if (!req.user.employeeId) {
+        return res.status(401).json({
+            success: false,
+            message: "x-employee-id header is required"
+        });
+    }
+    next();
 });
 
 const upload = multer({ storage });
@@ -37,6 +52,8 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/payroll", payrollRoutes);
 app.use("/api/payslip", payslipRoutes);
+app.use("/api/assistant", assistantRoutes);
+app.use("/api/tax", taxRoutes);
 
 
 // Start Server
